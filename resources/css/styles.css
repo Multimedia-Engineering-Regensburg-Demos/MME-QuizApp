@@ -1,0 +1,159 @@
+:root {
+    --background-color: #FAFAFA;
+    --font-color: #222222;
+    --category-font-color: #FFFFFF;
+    --default-category-color: #333333;
+    --card-background-color: #FFFFFF;
+    --font-color-wrong-answer: #ff1d15;
+    --font-color-correct-answer: #337ca0;
+    --books-color: #04e762;
+    --film-color: #f5b700;
+    --video-games-color: #dc0073;
+    --computers-color: #008bf8;
+}
+
+html,
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background-color);
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 2vh;
+    color: var(--font-color);
+}
+
+#footer a {
+    color: var(--font-color);
+    font-weight: 600;
+}
+
+.category-selector {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.category {
+    width: 15vw;
+    padding: 2vh;
+    border-radius: 0 0 5px 5px;
+    background-color: var(--default-category-color);
+    color: var(--category-font-color);
+    text-align: center;
+    font-weight: 600;
+    font-size: 2em;
+    opacity: 0.7;
+}
+
+.category:hover,
+.category.active {
+    opacity: 1;
+    cursor: pointer;
+    padding-top: 4vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    margin: 10vh auto;
+    padding: 0;
+    background-color: var(--card-background-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card .category-title {
+    height: 5vh;
+    line-height: 5vh;
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--category-font-color);
+}
+
+.card .question {
+    line-height: 5vh;
+    text-align: center;
+    font-size: 1.25em;
+    padding: 1vh;
+    color: var(--font-color);
+}
+
+.card .answers {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+}
+
+.card .answers li {
+    padding: 2vh;
+    font-size: 1.15em;
+}
+
+.card .answers li.correct {
+    color: var(--font-color-correct-answer);
+}
+
+.card .answers li.wrong {
+    color: var(--font-color-wrong-answer);
+    text-decoration: line-through;
+}
+
+.card .answers li:hover {
+    cursor: pointer;
+}
+
+.card .answers li:before {
+    display: inline-block;
+    margin-right: 1vh;
+    width: 4vh;
+    height: 4vh;
+    border-radius: 50%;
+    background-color: var(--default-category-color);
+    color: var(--category-font-color);
+    line-height: 4vh;
+    text-align: center;
+}
+
+.card .answers li.answer-a:before {
+    content: "A";
+}
+
+.card .answers li.answer-b:before {
+    content: "B";
+}
+
+.card .answers li.answer-c:before {
+    content: "C";
+}
+
+.card .answers li.answer-d:before {
+    content: "D";
+}
+
+.books {
+    background-color: var(--books-color);
+}
+
+.film {
+    background-color: var(--film-color);
+}
+
+.video-games {
+    background-color: var(--video-games-color);
+}
+
+.computers {
+    background-color: var(--computers-color);
+}

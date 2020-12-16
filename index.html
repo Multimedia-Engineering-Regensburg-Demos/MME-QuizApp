@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="resources/css/styles.css" />
+</head>
+
+<body>
+    <div class="category-selector">
+        <span class="category books">Books</span>
+        <span class="category film">Film</span>
+        <span class="category video-games">Video Games</span>
+        <span class="category computers">Computers</span>
+    </div>
+
+    <div id="footer">
+        Questions powered by <a href="https://opentdb.com/api_config.php">Open Trivia Database</a></div>
+    </div>
+
+    <!-- Template for card with question and answers. Generated element van be added to DOM right after .category-selector. -->
+    <template id="card-template">
+        <div class="card">
+            <span class="category-title film">{{CATEGORY}}</span>
+            <span class="question">{{QUESTION}}</span>
+            <ul class="answers">
+                <li class="answer-a">{{ANSWER_A}}</li>
+                <li class="answer-b">{{ANSWER_B}}</li>
+                <li class="answer-c">{{ANSWER_C}}</li>
+                <li class="answer-d">{{ANSWER_D}}</li>
+            </ul>
+        </div>
+    </template>
+
+</body>
+<script type="module" src="resources/js/app.js"></script>
+
+</html>
